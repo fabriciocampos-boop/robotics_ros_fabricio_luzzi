@@ -13,7 +13,7 @@ docker run -it --rm \
     -v /dev/dri:/dev/dri \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=$DISPLAY \
-    -v $PWD/ros_ws:/home/$USERNAME/ros_ws \
+    -v "$PWD/ros_ws:/home/host/ros_ws" \
     --privileged \
     --name $CONTAINER_NAME \
     $IMAGE_NAME:$IMAGE_TAG
