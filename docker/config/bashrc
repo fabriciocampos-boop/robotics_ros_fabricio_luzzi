@@ -3,16 +3,22 @@ export ROS_DISTRO=jazzy
 
 source /opt/ros/$ROS_DISTRO/setup.bash
 
-if [ -f "/ros_ws/install/setup.bash" ]; then
-    source /ros_ws/install/setup.bash
+if [ -f "$HOME/ros_ws/install/setup.bash" ]; then
+    source "$HOME/ros_ws/install/setup.bash"
 fi
 
 export ROS_DOMAIN_ID=${ROS_DOMAIN_ID:-0}
 
 
+# Autocomplete geral do Bash
 if [ -f /usr/share/bash-completion/bash-completion ]; then
     source /usr/share/bash-completion/bash-completion
-fi 
+fi
+
+# Autocomplete do colcon
+if [ -f /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash ]; then
+    source /usr/share/colcon_argcomplete/hook/colcon-argcomplete.bash
+fi
 
 
 export PS1="(ROS_ID=${ROS_DOMAIN_ID}) \u@\h:\w\$ "
