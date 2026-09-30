@@ -1,4 +1,0 @@
-float32[] ranges
-float32 angle_increment
-float32 angle_min
-float32 angle_max

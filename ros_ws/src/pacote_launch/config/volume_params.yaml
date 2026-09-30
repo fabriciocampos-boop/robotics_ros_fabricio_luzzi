@@ -1,4 +1,0 @@
-cylinder_volume_node:
-  ros__parameters:
-    raio: 5.0
-    altura: 10.0
