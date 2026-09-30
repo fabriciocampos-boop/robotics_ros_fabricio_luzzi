@@ -1,0 +1,3 @@
+float32 use_percentage
+uint64 total_memory_bytes
+uint64 use_memory_bytes

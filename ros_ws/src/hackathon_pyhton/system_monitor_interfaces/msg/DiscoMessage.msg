@@ -1,0 +1,3 @@
+float32 use_disco_percentage
+uint64 total_disco_bytes
+uint64 use_disco_bytes

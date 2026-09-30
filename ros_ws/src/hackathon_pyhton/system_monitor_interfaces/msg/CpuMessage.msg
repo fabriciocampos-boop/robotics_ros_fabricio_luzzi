@@ -1,0 +1,4 @@
+uint64 number_cores
+float32 mean_use_percentage
+float32[] mean_use_core_percentage
+float32 temperature
