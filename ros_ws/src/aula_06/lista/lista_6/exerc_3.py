@@ -11,6 +11,7 @@ class VelocityPublisher(Node):
         self.timer = self.create_timer(1.0, self.timer_callback)
         self.count = 0
 
+        
     def timer_callback(self):
         msg = VelocityHistory()
         msg.linear_velocities = [0.5, 0.7, 0.9, 1.1]
@@ -46,15 +47,11 @@ def main(args=None):
     executor = MultiThreadedExecutor()
     executor.add_node(publisher_node)
     executor.add_node(subscriber_node)
-
-    try:
-        executor.spin()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        publisher_node.destroy_node()
-        subscriber_node.destroy_node()
-        rclpy.shutdown()
+    executor.spin()
+    pass
+    publisher_node.destroy_node()
+    subscriber_node.destroy_node()
+    rclpy.shutdown()
 
 
 if __name__ == '__main__':

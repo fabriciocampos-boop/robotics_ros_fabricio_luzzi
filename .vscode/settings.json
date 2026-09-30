@@ -68,5 +68,6 @@
   ],
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
-  }
+  },
+  "cmake.sourceDirectory": "/home/ryan/Documents/Sonho - Mobile Robotics/Repositorios/robotics_ros_fabricio_luzzi/ros_ws/src/monitoria_nodes"
 }
